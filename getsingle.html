@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="box"></div>
+    <input type="text" name="" id="" />
+    <button>get data</button>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.js"
+      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      $(function () {
+        $("button").click(function () {
+          var id = $("input").val();
+
+          var settings = {
+            url: `http://localhost:3000/users/${id}`,
+            method: "GET",
+            timeout: 0,
+          };
+
+          $.ajax(settings).done(function (response) {
+            $("#box").html("");
+            $("#box").append(`
+         <h2>user name:${response.name} </h2>
+         <p>age: ${response.age}</p>`);
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,39 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "name": "amir",
+      "age": "23"
+    },
+    {
+      "name": "fafa",
+      "age": 23,
+      "id": "2"
+    },
+    {
+      "id": "3f21",
+      "name": "mina",
+      "age": 32
+    },
+    {
+      "id": "3370",
+      "name": "nikoo",
+      "age": "25"
+    }
+    {
+      "id": "9731",
+      "name": "shayan",
+      "age": "30"
+    }
+  ],
+  "post": [
+    {
+      "id": "1",
+      "title": "user 1"
+    },
+    {
+      "id": "2",
+      "title": "user 2"
+    }
+  ]
+}
